@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'team-generator';
+  newMemberName = "";
+  members: string[] = [];
+
+  addMember() {
+    this.members.push(this.newMemberName);
+    this.newMemberName = "";
+    console.log(this.members)
+  }
+
+  onInput(member: string) {
+    this.newMemberName = member;
+    console.log(this.newMemberName);
+  }
 }
